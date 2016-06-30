@@ -81,8 +81,6 @@ BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
 # Graphics
 BOARD_EGL_CFG := device/samsung/galaxys2-common/configs/egl.cfg
 BOARD_EGL_NEEDS_HANDLE_VALUE := true
-BOARD_EGL_SKIP_FIRST_DEQUEUE := true
-BOARD_EGL_SYSTEMUI_PBSIZE_HACK := true
 USE_OPENGL_RENDERER := true
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH -DWORKAROUND_BUG_10194508
@@ -149,12 +147,6 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/galaxys2-common/bluetooth/vnd_smdk4210.txt
 
-# Vold
-BOARD_VOLD_MAX_PARTITIONS := 12
-BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/lun%d/file"
-
 # Selinux
 BOARD_SEPOLICY_DIRS += device/samsung/galaxys2-common/selinux
 
@@ -184,7 +176,7 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/galaxys2-common/shbootimg.mk
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.exynos4
 
 # PowerHAL
-TARGET_POWERHAL_VARIANT := pegasusq
+TARGET_POWERHAL_VARIANT := ondemand
 
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/galaxys2-common/BoardConfigVendor.mk
