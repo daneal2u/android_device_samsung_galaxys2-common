@@ -77,8 +77,8 @@ PRODUCT_PACKAGES += \
     libaudiohw_legacy
 
 # Gello Browser
-# PRODUCT_PACKAGES += \
-#	Gello
+PRODUCT_PACKAGES += \
+	Gello
 
 # HAL
 PRODUCT_PACKAGES += \
@@ -96,10 +96,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images
-
-# Gello browser
-PRODUCT_PACKAGES += \
-	Gello
 
 # MFC API
 PRODUCT_PACKAGES += \
